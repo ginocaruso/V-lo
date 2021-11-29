@@ -1,0 +1,53 @@
+/* .............media Queries........... */
+
+@media screen and (max-width: 600px ){
+    .search{
+        display: none;
+    
+    }
+
+    .mobile{
+        display: unset;
+    
+    }
+
+    .mobile_hidden{
+        display: none;
+    }
+
+    .profile ul{
+        justify-content: flex-end;
+
+        
+    }
+
+    .profile ul>li {
+        margin-right: 2rem;
+    }
+
+    .wrapper{
+        grid-template-areas: 
+        "profile"
+        "banner"
+        "main";
+    }
+
+    .banner{
+        display: none;
+    }
+
+    aside{
+        display: none;
+    }
+
+    .banner{
+        grid-template-areas: 
+        "location greenbox"
+        "location bluebox";
+        background-image: none;
+        grid-template-columns: 1fr 2fr;
+    }
+
+
+}
+

@@ -1,0 +1,290 @@
+@font-face {
+    font-family: "Proxima-Nova-Light";
+    src: url(./Fonts/Proxima-Nova-Light.otf);
+}
+@font-face {
+    font-family: "Proxima-Nova-Regular";
+    src: url(./Fonts/Proxima-Nova-Regular.otf);
+}
+@font-face {
+    font-family: "Proxima-Nova-SemiBold";
+    src: url(./Fonts/Proxima-Nova-SemiBold.otf);
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+/*...... GRIDS ......*/
+
+/* Body */
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 100px 300px 1fr;
+    grid-template-columns: 100px 300fr 1fr;
+    grid-template-areas: 
+        "logo search profile"
+        "vnav banner banner"
+        "vnav main contact";
+  
+    font-family: "Proxima-Nova-Regular";
+}
+
+/* Banner */
+
+.banner {
+    background-image: url(img/background-header.png);
+    background-size:100% 100%;
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: 1fr 150px 150px;
+    grid-template-areas: 
+        "location greenbox bluebox";
+}
+
+.location {
+    width: 200px;
+    height: 20px;
+    bottom: 30px;
+    left: 60px;
+    font-size: 20px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 140px;
+
+}
+
+.greenbox {
+    grid-area: greenbox;
+    background-color: rgba(190, 219, 57, 0.5);
+}
+
+.bluebox {
+    grid-area: bluebox;
+    background-color: rgba(190, 219, 57, 0.5);
+}
+
+.greenbox, .bluebox {
+    padding-top: 55px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Articles */
+
+.articles_wrapper {
+    grid-area: main;
+    display: flex;
+    background-color: #eeeeee;
+    flex-wrap: wrap;
+    /* padding-left: 25px;
+    padding-right: 25px; */
+    justify-content: center;
+    align-items: center;
+    
+  
+}
+
+
+.filter1{
+    width: 50%;
+}
+
+.filter2{
+    width: 50%;
+}
+/*...... ARTICLES...... */
+
+/* Header */
+
+.articles_header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+
+}
+
+.articles_header ul li {
+    display: inline-block;
+    font-size: 22px;
+    padding-top: 50px;
+    padding-right: 20px;
+    margin-left: 0px;
+    font-family: "Proxima-Nova-SemiBold";
+    color: rgb(185, 185, 185);
+}
+
+.articles_header ul li:hover {
+    color: #1BBDBF;
+}
+
+.articles_header_icons {
+    bottom: 25px;
+    right: 50px;
+
+}
+li.active {
+    color:#0b8385;
+}
+
+
+
+
+
+.user {
+
+    background-color: white;
+ 
+    border-bottom: 2px rgb(214, 214, 214) solid;
+    padding: 15px;
+}
+
+.counter {
+    color:rgba(0, 102, 128, 0.582);
+   
+    font-size: 20px;
+  
+    font-family: "Proxima-Nova-SemiBold";
+
+}
+
+/* Horizontal Navigation (Search Bar, Profile, Logo) */
+
+.logo {
+    grid-area: logo;
+    background-color: #2bbfbd;
+    display: flex;
+    padding: 40px;
+    align-content: center;
+    justify-content: center;
+}
+
+.search {
+    background-color: white;
+    grid-area: search;
+    padding: 40px;
+}
+
+
+input[type=text]{
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-bottom: solid 1px rgb(185, 185, 185);
+    color: rgb(185, 185, 185);
+    font-size: 18px;
+}
+
+/*...... PROFIL...... */
+
+.profile {
+    grid-area: profile;
+    display: flex;
+    align-items: center;
+}
+
+.profile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+
+    
+/* VERTICAL NAVIGATION */
+
+.vnav {
+    grid-area: vnav;
+    background-color: #121920;
+    position: relative;
+}
+
+nav>div>ul{
+    margin-top: 20px;
+    font-size: 20px;
+}
+nav>div>ul>li{
+    margin-top: 50px;
+    color: #2A2E37;
+}
+nav>div>ul>li:hover{
+    margin-top: 50px;
+    color: #1BBDBF;
+}
+
+.nav2 {
+    padding-top: 50px;
+}
+
+/* BARRE DE CONTACT */
+
+.contactbar {
+    grid-area: contact;
+    background-color: white;
+    font-family: "Proxima-Nova-SemiBold";
+}
+
+.chat {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+aside>h2 {
+    text-align: center;
+    color:rgb(138, 138, 138)
+}
+
+.users>li>img {
+margin-top: 5px;}
+
+
+aside>div>ul>li{
+    width: 250px;
+    padding-right: 0px;
+    padding-bottom: 15px;
+    display: block;
+}
+
+
+
+
+ul {
+    list-style: none;
+}
+
+/* Tailles Images */
+
+article{
+    /* margin: 15px; */
+    margin: 25px;
+
+}
+
+.user_data {
+display: flex;
+}
+
+.user_data li {
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.user_data li i {
+    margin-left: 5px;
+}
+
+/* mobile hidden */
+
+.mobile{
+    display: none;
+}
+
